@@ -65,17 +65,8 @@ exports.successfulRegistration = async (req, res) => {
   }
 
   if (errors.length > 0) {
-    console.log("Errors", errors);
-    res.render("register", { username, email, password, password2 });
+    res.render("register", { username, email, password, password2, errors });
   } else {
-    const newUSer = new User({
-      username,
-      email,
-      password,
-    });
-
-    newUSer.save();
-
     res.send("Successfully registered");
   }
 };
