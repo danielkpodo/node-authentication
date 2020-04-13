@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+
+    <title>Welcome to Writer Wall</title>
+  </head>
+  <body>
+    <main class="wrapper">
+      <h1 class="text-center py-2">Register for a free account</h1>
+      <div class="container">
+        <div class="row mt-3">
+          <div class="col-sm-12 col-md-6 col-lg-6">
+            <img
+              src="/assets/images/undraw_my_app_grf2.svg"
+              alt=""
+              class="d-none d-sm-block"
+            />
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="alert alert-dismissible alert-danger">
+              <button type="button" class="close" data-dismiss="alert">
+                &times;
+              </button>
+              <strong>All fields are required</strong>
+            </div>
+            <form action="/register" method="POST" autocomplete="off">
+              <div class="form-group">
+                <label for="username">Your username</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  value=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" value="" />
+                <small id="email" class="form-text text-muted"
+                  >We'll never share your email with anyone else.</small
+                >
+              </div>
+              <div class="form-group">
+                <label for="password">Your password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  value=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="password2">Confirm password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password2"
+                  value=""
+                />
+              </div>
+              <button class="btn btn-success mb-1 register">
+                Sign In
+              </button>
+            </form>
+            <div class="decider">
+              <p class="lead">Already have an account?</p>
+              <p><a href="login.html">Sign In</a></p>
+            </div>
+            <a href="#!">Back Home</a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="/js/jquery.3.4.1.min.js"></script>
+    <script src="/js/popper.1.16.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+  </body>
+</html>

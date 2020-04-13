@@ -1,0 +1,34 @@
+body {
+  font-family: "open sans", sans-serif;
+  -webkit-font-smoothing: antialised;
+}
+
+.wrapper {
+  margin-top: 40px;
+}
+
+.wrapper h1 {
+  font-family: "Noto Sans", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.decider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.register {
+  background: #f9a826;
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper h1 {
+    font-size: 2rem;
+  }
+}

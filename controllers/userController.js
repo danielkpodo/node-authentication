@@ -1,7 +1,7 @@
 exports.login = (req, res) => {
-  res.send("login page");
+  res.render("login");
 };
 
 exports.register = (req, res) => {
-  res.send("Registration page");
+  res.render("register");
 };
