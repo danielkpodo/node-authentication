@@ -5,6 +5,10 @@
   "main": "app.js",
   "author": "Daniel Narh",
   "license": "MIT",
+  "scripts": {
+    "start": "nodemon db.js",
+    "dev": "node db.js"
+  },
   "dependencies": {
     "connect-flash": "^0.1.1",
     "dotenv": "^8.2.0",
