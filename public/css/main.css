@@ -31,4 +31,18 @@ img {
   .wrapper h1 {
     font-size: 2rem;
   }
+
+  .home h1 {
+    font-size: 2rem;
+  }
+}
+
+.home {
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+.home h1 {
+  text-align: center;
+  font-weight: 600;
 }
