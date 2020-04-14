@@ -1,6 +1,7 @@
 const User = require("../models/User");
 const validator = require("validator");
 const bcrypt = require("bcryptjs");
+const passport = require("passport");
 
 exports.login = (req, res) => {
   res.render("login");
@@ -90,6 +91,16 @@ exports.successfulRegistration = async (req, res) => {
   }
 };
 
-exports.successfulLogin = async (req, res) => {
-  res.send("Successful login");
+exports.successfulLogin = (req, res, next) => {
+  passport.authenticate("local", {
+    successRedirect: "/dashboard",
+    failureRedirect: "/users/login",
+    failureFlash: true,
+  })(req, res, next);
+};
+
+exports.logout = (req, res) => {
+  req.logout();
+  req.flash("success", "You have successfully logout");
+  res.redirect("/users/login");
 };
