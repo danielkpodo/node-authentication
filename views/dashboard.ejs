@@ -1,0 +1,21 @@
+<%- include ("./partials/header"); %>
+
+<main class="dashboard">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="text-center">
+          Welcome to the protected dashboard, <strong><span style="color: #207298"><%= name %> </strong>
+        </h1>
+        <p class="text-center lead">
+          Nice you have finally made it to the protected route!
+        </p>
+        <div class="text-center">
+          <a href="/users/logout" type="button" class="btn btn-primary">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<%- include ("./partials/footer"); %>

@@ -15,6 +15,7 @@ require("./config/passport")(passport);
 
 const users = require("./routes/users");
 const home = require("./routes/index");
+const dashboard = require("./routes/dashboard");
 
 app.use(helmet());
 app.set("view engine", "ejs");
@@ -35,5 +36,6 @@ app.use((req, res, next) => {
 
 app.use("/", home);
 app.use("/users", users);
+app.use("/dashboard", dashboard);
 
 module.exports = app;
