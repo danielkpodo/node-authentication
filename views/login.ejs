@@ -11,12 +11,7 @@
         />
       </div>
       <div class="col-sm-12 col-md-6 col-lg-6">
-        <div class="alert alert-dismissible alert-danger">
-          <button type="button" class="close" data-dismiss="alert">
-            &times;
-          </button>
-          <strong>All fields are required</strong>
-        </div>
+        <%- include ("./partials/messages"); %>
         <form action="/users/login" method="POST" autocomplete="off">
           <div class="form-group">
             <label for="email">Email address</label>

@@ -5,4 +5,20 @@
   </button>
   <strong><%= error.msg %> </strong>
 </div>
-<% }); %> <% } %>
+<% }); %> <% } %> <% if (success && success.length > 0) { %>
+<div class="alert alert-dismissible alert-success">
+  <button type="button" class="close" data-dismiss="alert">
+    &times;
+  </button>
+  <strong><%= success %> </strong>
+</div>
+
+<% } %> <% if (error && error.length > 0) { %>
+<div class="alert alert-dismissible alert-warning">
+  <button type="button" class="close" data-dismiss="alert">
+    &times;
+  </button>
+  <strong><%= error %> </strong>
+</div>
+
+<% } %>

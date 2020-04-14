@@ -1,5 +1,6 @@
 const User = require("../models/User");
 const validator = require("validator");
+const bcrypt = require("bcryptjs");
 
 exports.login = (req, res) => {
   res.render("login");
@@ -67,7 +68,25 @@ exports.successfulRegistration = async (req, res) => {
   if (errors.length > 0) {
     res.render("register", { username, email, password, password2, errors });
   } else {
-    res.send("Successfully registered");
+    let newRegistrant = new User({
+      username,
+      email,
+      password,
+    });
+
+    bcrypt.genSalt(10, (err, salt) => {
+      bcrypt.hash(newRegistrant.password, salt, (err, hash) => {
+        if (err) throw err;
+        newRegistrant.password = hash;
+        newRegistrant
+          .save()
+          .then((user) => {
+            req.flash("success", "You are successfully registered, login");
+            res.redirect("/users/login");
+          })
+          .catch((err) => console.log(err));
+      });
+    });
   }
 };
 
