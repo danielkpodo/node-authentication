@@ -7,6 +7,7 @@
 + ejs
 + Passport
 + HTML
++ CSS
 
 ### Essential Features of the application
 + Validates user registration on the following fields
@@ -28,7 +29,7 @@
 + Open terminal to run npm install/yarn install to install all dependencies
 
 
-#### New fetaures coming soon
+#### New fetaures coming out
 + Password reset option
 + Limit user login attempts 
 + Authentication with other strategies, e.g facebook, twitter and others
